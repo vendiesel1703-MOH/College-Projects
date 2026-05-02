@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,6 +20,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#certifications">Certifications</a></li>
+        <li><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -31,6 +35,18 @@
           I am a passionate developer who builds practical software solutions.
           This portfolio highlights my experience, education, skills, and projects.
         </p>
+        <div class="hero-actions">
+          <a class="btn btn--ghost" href="#projects">View projects</a>
+          <!-- Place resume.pdf beside index.html -->
+          <a class="btn btn--primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download résumé
+          </a>
+        </div>
       </div>
     </section>
 
@@ -67,14 +83,26 @@
         <h2>Education</h2>
         <div class="card-grid">
           <article class="card">
-            <h3>Bachelor's Degree - University Name</h3>
-            <p>2020 - 2024</p>
-            <p>Major: Computer Science</p>
+            <div class="card-head card-head--compact">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>
+              </span>
+            </div>
+            <div class="card-body">
+              <h3>Bachelor's Degree - University Name</h3>
+              <p>2020 – 2024 · Major: Computer Science</p>
+            </div>
           </article>
           <article class="card">
-            <h3>High School - School Name</h3>
-            <p>2018 - 2020</p>
-            <p>Stream: Science</p>
+            <div class="card-head card-head--compact">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>
+              </span>
+            </div>
+            <div class="card-body">
+              <h3>High School - School Name</h3>
+              <p>2018 – 2020 · Stream: Science</p>
+            </div>
           </article>
         </div>
       </div>
@@ -82,26 +110,71 @@
 
     <section id="projects" class="section">
       <div class="container">
-        <h2>My Projects</h2>
+        <div class="section-heading">
+          <h2>Featured projects</h2>
+        </div>
         <div class="card-grid">
-          <article class="card">
-            <h3>Project Title 1</h3>
-            <p>
-              Write a short description of the project and what problem it solves.
-            </p>
-            <div class="links">
-              <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <article class="card card--project">
+            <div class="card-head">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </span>
+            </div>
+            <div class="card-body">
+              <h3>E-Commerce Platform</h3>
+              <p>A full-stack online store with cart, checkout flow, and admin tools. Built with React, Node.js, and a SQL database.</p>
+              <div class="card-links">
+                <a class="card-link" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+                <a class="card-link" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live demo
+                </a>
+              </div>
             </div>
           </article>
-          <article class="card">
-            <h3>Project Title 2</h3>
-            <p>
-              Write a short description of the project and what problem it solves.
-            </p>
-            <div class="links">
-              <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <article class="card card--project">
+            <div class="card-head">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </span>
+            </div>
+            <div class="card-body">
+              <h3>Task Management App</h3>
+              <p>Organize tasks with boards, due dates, and team assignments. Responsive UI with real-time updates.</p>
+              <div class="card-links">
+                <a class="card-link" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+                <a class="card-link" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live demo
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--project">
+            <div class="card-head">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </span>
+            </div>
+            <div class="card-body">
+              <h3>Data Analytics Dashboard</h3>
+              <p>Visualize KPIs with charts and filters. Connects to APIs for live data and exports reports.</p>
+              <div class="card-links">
+                <a class="card-link" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+                <a class="card-link" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live demo
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -127,12 +200,26 @@
         <h2>Certifications</h2>
         <div class="card-grid">
           <article class="card">
-            <h3>Certification Name</h3>
-            <p>Issuing Organization - 2025</p>
+            <div class="card-head card-head--compact">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              </span>
+            </div>
+            <div class="card-body">
+              <h3>Certification Name</h3>
+              <p>Issuing organization · 2025</p>
+            </div>
           </article>
           <article class="card">
-            <h3>Certification Name</h3>
-            <p>Issuing Organization - 2024</p>
+            <div class="card-head card-head--compact">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              </span>
+            </div>
+            <div class="card-body">
+              <h3>Certification Name</h3>
+              <p>Issuing organization · 2024</p>
+            </div>
           </article>
         </div>
       </div>
@@ -142,6 +229,16 @@
       <div class="container">
         <h2>Contact</h2>
         <p>Feel free to reach out.</p>
+        <div class="contact-actions">
+          <a class="btn btn--primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download résumé
+          </a>
+        </div>
         <ul class="contact-list">
           <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
