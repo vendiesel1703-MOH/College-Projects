@@ -9,3 +9,9 @@ This repository contains my web development and college projects.
 - HTML
 - CSS
 - JavaScript
+
+## 🚀 Projects
+
+### Portfolio Website
+- Built using HTML, CSS, and JavaScript
+- Features responsive design and clean UI
